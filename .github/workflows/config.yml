@@ -1,0 +1,10 @@
+name: test-with-catch2
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: g++ src/test_main.cpp -o test_main # compile tests
+      - run: ./test_main # run tests
