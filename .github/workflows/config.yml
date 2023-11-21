@@ -6,5 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: g++ src/test_main.cpp -o test_main # compile tests
-      - run: ./test_main # run tests
+      - run: g++ src/test_main.cpp tests/catch_amalgamated -o src/test_main
+      - run: ./src/test_main # run tests
